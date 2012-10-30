@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3D Image Hover Effects with CSS3 and jQuery - Compilr.org</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="3D Image Hover Effects with CSS3 and jQuery" />
+        <meta name="keywords" content="3d, 3dtransform, hover, effect, thumbnail, overlay, curved, folded" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="js/modernizr.custom.69142.js"></script> 
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34328492-1']);
+  _gaq.push(['_setDomainName', 'compilr.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </head>
+    <body>
+        <div class="container">
+			
+			
+			<header>
+			<div style="border-bottom: 2px solid; padding-bottom: 20px;
+margin-bottom: 40px;">
+			<a href="http://compilr.org" title="Go to home"><img src="http://img.compilr.org/imgs/cLogo.png"/></a>
+			</div>
+				<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=354085738013416";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like" data-href="http://www.facebook.com/compilr.org" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+			<br>
+				<h1><span>3D Image</span> Hover Effects with CSS3 and jQuery</h1>
+	
+				<div class="support-note"><!-- let's check browser support with modernizr -->
+					<!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
+					<span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+					<span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span>
+					<span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+					<span class="note-ie">Sorry, only modern browsers.</span>
+				</div>
+				
+			</header>
+
+            <div id="grid" class="main">
+				<div class="view">
+					<div class="view-back">
+						<span data-icon="A">1976</span>
+						<span data-icon="B">5076</span>
+						<a href="http://compilr.org">&rarr;</a>
+					</div>
+					<img src="images/1.jpg" />
+				</div>
+			</div>
+        </div>
+		<script type="text/javascript">	
+			
+			Modernizr.load({
+				test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+				yep : ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','js/jquery.hoverfold.js'],
+				nope: 'css/fallback.css',
+				callback : function( url, result, key ) {
+						
+					if( url === 'js/jquery.hoverfold.js' ) {
+						$( '#grid' ).hoverfold();
+					}
+
+				}
+			});
+				
+		</script>
+    </body>
+</html>
